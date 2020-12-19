@@ -89,7 +89,7 @@
     command.push("-extent");
     command.push("595x842");
     command.push(`${Date.now()}.pdf`); // Convert to PDF
-    console.log(command);
+
     // Convert to pdf
     let processedFiles = await Magick.Call(fetchedFile, command);
     let blob = new Blob([processedFiles[0].blob], { type: "application/pdf" });
